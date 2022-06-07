@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+import django_heroku
+import dj_database_url
+
 from pathlib import Path
 from pickle import TRUE
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'analitics',
     'users',
     'contact',
@@ -51,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Django.urls'
@@ -79,12 +84,17 @@ WSGI_APPLICATION = 'Django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7mspbhpq5d5s5',
+        'USER': 'pokkafmszcpyvv',
+        'PASSWORD': '15a36fb9a7f05a9b05261e0bc918f2394269bc220b4bd622172a4343a28aba7c',
+        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
-
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -141,3 +151,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'baymuratov_a@gmail.com'
 EMAIL_HOST_PASSWORD = '778136177'
 EMAIL_USE_SSL = True
+
+
+django_heroku.settings(locals())
