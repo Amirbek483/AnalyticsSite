@@ -61,7 +61,7 @@ p{
 }
 
 .main{
-	background: url(./img/back1.png);
+	background: url("./img/back1.ee61b618607a.png");
 	background-size: cover;
 	background-position: center;
   background-repeat: no-repeat;  
@@ -87,7 +87,7 @@ body{
 }
 
 #back{
-	background-image: url("./img/back1.png");
+	background-image: url("./img/back1.ee61b618607a.png");
 	height: auto;
 	width: auto;
 	display: block;
