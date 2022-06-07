@@ -46,7 +46,7 @@
 }
 
 .main{
-	background: url(/static/img/back\ 1.png);
+	background: url(./img/back1.png);
 	background-size: cover;
 	background-position: center;
   	background-repeat: no-repeat;  
