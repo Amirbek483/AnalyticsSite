@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30">
+	<link rel="stylesheet" type="text/css" href="{% static './reg.css' %}">
+	<title>Registration</title>
+</head>
+<body>
+	<header id="zagolovok">
+		<nav>
+		<div id="menu" class="navbar">
+			<img class="logo1" src="{% static 'img/promo-logo2.png' %}">
+			<div id="navtext">
+				<a class="login" href="login">Войти</a>
+				<a class="text"  onclick="slowScroll('#AboutUs')" >О нас</a>
+				<a class="text"  onclick="slowScroll('#Price')" href="Price">Прайс</a>
+				<a class="text"  onclick="slowScroll('#Contacts')" href="Contacts">Контакты</a>
+			</div>
+		</div>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="forma">
+			<h1>Регистрация</h1>
+			<div class="content">
+				<form method="POST">
+					{% csrf_token %}
+					<div class="form-row">
+						<p class="label-text">Почта</p>
+						<input type="text" class="input" name="email" placeholder="username@gmail.com">
+					</div>
+					<div class="form-row">
+						<p class="label-text">Пароль</p>
+						<input type="password" class="input" name="password1" placeholder="Введите пароль">
+					</div>
+					<div class="form-row">
+						<p class="label-text">Подтвердите пароль</p>
+						<input type="password" class="input" name="password2" placeholder="Подтвердите пароль">
+					</div>
+					<div class="submit-row">
+						<input class="sub" type="submit" value="Зарегистрироваться">
+					</div>
+					<div>
+						<a href="login" class="registr">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>

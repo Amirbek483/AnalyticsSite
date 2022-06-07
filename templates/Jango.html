@@ -1,0 +1,125 @@
+{% load static %}
+{% load contact_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30">
+	<link rel="stylesheet" type="text/css" href="{% static './Jungo.css' %}">
+	<title>Landing</title>
+</head>
+<body>
+	<header id="zagolovok">
+		<nav>
+		<div id="menu" class="navbar">
+			<img class="logo1" src="{% static 'img/promo-logo2.png' %}">
+			<div id="navtext">
+				<a class="login" href="login">Войти</a>
+				<a class="text" onclick="slowScroll('#AboutUs')" href="AboutUs">О нас</a>
+				<a class="text" onclick="slowScroll('#Price')" href="Price">Прайс</a>
+				<a class="text" onclick="slowScroll('#Contacts')" href="Contacts">Контакты</a>
+			</div>
+		</div>
+		</nav>
+	</header>
+	<div class="main">
+		<div class="main-zag">
+			<p id="zag">Promo Analytics</p>
+		</div>
+		<div class="main-text">
+			<p class="text1">Система анализа многомерных данных и</p>
+			<p class="text2">принятия решений на их основе</p>
+		</div>
+		<div class="main-button">
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLScZ0oGGKtzvooxgz9bE2P78zDdo0G4h93HCujcolmRRTFG7Kw/viewform?usp=send_form" class="button">Связаться</a>
+		</div>
+		<H1 class="product-text">Продукт</H1>
+		<div class="product-pic" id="AboutUs">
+			<img class="product" src="{% static 'img/power-bi-new-dashboa.png' %}">
+		</div>
+		<h2 class="usluga">Портрет нашего клиента</h2>
+		<div>
+			<div class="text-uslug1">
+				<p class="text-a">Супермаркет - Ассортимент - от 4 до 20 тысяч наименований,<br>
+					продукты питания на каждый день.</p>
+				<p class="text-b">Строительные компании/магазины.</p>
+				<p class="text-a">Магазины товаров для дома-непродовольственные<br>
+				 	товары, предметы интерьера и др.</p>
+				<p class="text-b">Гипермаркеты - продовольственные и непродовольственные товары универсального ассортимента.</p>
+				<p class="text-a">Специализированный магазин – торговая<br>
+				 	площадь, согласно ГОСТу от 18 кв.м. и, как правило, не более 200 кв.м.</p>
+				<p class="text-b">Магазины косметики и средств по уходу за телом</p>
+				<p class="text-a">Супермаркет, гастроном, торговый павильон - магазины,<br>
+				 	схожие по ассортименту с супермаркетом, магазином у дома и минимаркетом.</p>
+			</div>
+		</div>
+		<h2 class="target">Цель продукта</h2>
+		<div class="target-pic">
+			<div class="pics">
+				<img src="{% static 'img/image 8.png' %}">
+				<p class="target-text">Прогнозировать продажи</p>
+			</div>
+			<div class="pics">
+				<img src="{% static 'img/image 9.png' %}">
+				<p class="target-text">Увеличить прибыль</p>
+			</div>
+			<div class="pics">
+				<img src="{% static 'img/image 11.png' %}">
+				<p class="target-text">Повысить продажи</p>
+			</div>
+			<div class="pics">
+				<img src="{% static 'img/image 11-1.png' %}">
+				<p class="target-text">Понимать поведение клиента</p>
+			</div>
+		</div>
+		<div class="price-background">
+			<h2 class="price-title">Прайс</h2>
+			<div class="price-blocks">
+				<div id="Price" class="price-block1">
+					<p class="price-size">Малый бизнес</p>
+					<p class="price-month">100$</p>
+					<p class="month">в месяц</p>
+					<p class="users">до 2-х пользователей</p>
+				</div>
+				<div class="price-block2">
+					<p class="price-size">Средний бизнес</p>
+					<p class="price-month">200$</p>
+					<p class="month">в месяц</p>
+					<p class="users">до 3-х пользователей</p>
+				</div>
+				<div class="price-block3">
+					<p class="price-size1">Предприятие</p>
+					<p class="price-cost">Рассматривается</p>
+					<p class="individual">индивидуально</p>
+				</div>
+			</div>
+		</div>
+		<div class="main1">
+			<h2 class="cont-zag">Связаться с нами</h2>
+			<p class="cont-text">По всем вопросам и предложениям Вы можете написать нам:</p>
+			<div class="content">
+				<form action="s">
+					<div class="form-row">
+						<label for="id_email" class="required">Почта</label>
+						<input type="text" class="input" name="email" placeholder="username@gmail.com">
+						{% csrf_token %}
+						{{ contact_form }}
+					</div>
+					<div class="submit-row">
+						<input class="sub" type="submit" value="Отправить">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="mail-background">
+			<h2 class="number">+996 550 204 444</h2>
+			<h2 id="Contacts" class="mail">promoanalytics7@gmail.com</h2>
+			<p class="adress">Mederova St. 161a</p>
+			<a href="https://www.instagram.com/promo.analytics/">
+				<img class="instagram" src="{% static 'img/Group.png' %}">
+			</a>
+	</div>
+	<script src="{% static './script.js' %}">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</body>
+</html>

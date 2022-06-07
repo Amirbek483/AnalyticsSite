@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30">
+	<link rel="stylesheet" type="text/css" href="{% static './Jungo.css' %}">
+	<title>FMP</title>
+</head>
+<body>
+	<header id="zagolovok">
+		<nav>
+		<div id="menu" class="navbar">
+			<img class="logo1" src="{% static 'img/promo-logo2.png' %}">
+			<div id="navtext">
+				<a id="text" class="login"  onclick="slowScroll('#Login')" href="Login">Войти</a>
+				<a id="text"  onclick="slowScroll('#AboutUs')" >О нас</a>
+				<a id="text"  onclick="slowScroll('#Price')" href="Price">Прайс</a>
+				<a id="text"  onclick="slowScroll('#Contacts')" href="Contacts">Контакты</a>
+			</div>
+		</div>
+		</nav>
+	</header>
+</body>

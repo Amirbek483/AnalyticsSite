@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.obol {
+	position: sticky;
+}
+
+.logo1{
+	padding-top: 2vh;
+	width: 25vh;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+#navtext{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	right: 0;
+}
+
+.login{
+	border: 2.5px solid #0087D2;
+    background-color: #0087D2;
+	padding: 5px 20px;
+	border-radius: 40px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 3.2vh;
+	font-weight: 500;
+	margin-right: 1vh;
+}
+
+.text{
+	color: rgb(0, 0, 0);
+	font-size: 4vh;
+	text-decoration: none;
+	margin: 0 30px;
+}
+
+.main{
+	background: url(/static/img/back\ 1.png);
+	background-size: cover;
+	background-position: center;
+  	background-repeat: no-repeat;  
+	height: 120vh;
+}
+
+.forma{
+    width: 42%;
+    height: 75%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 70%;
+    left: 50%;
+    background-color: #123974;
+    border: 3px solid #648bc5;
+    border-radius: 40px;
+}
+
+h1{
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    padding-top: 7vh;
+    font-weight: 400;
+}
+
+.content{
+    padding-top: 2vh;
+}
+
+.sub{
+    width: 75.4%;
+    height: 53px;
+    position: absolute;
+    background-color: #0087D2;
+    border-radius: 8px;
+    transform: translate(-50%,-50%);
+    top: 77%;
+    left: 50%;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+
+.label-text{
+    color: white;
+    font-size: 20px;
+    margin-top: 3vh;
+    padding-bottom: 0.7vh;
+    padding-right: 3vh;
+}
+
+.input{
+    width: 70%;
+    height: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: white;
+}
+
+.form-row{
+    position: relative;
+    left: 12%;
+    padding-top: 2vh;
+}
+
+.fg{
+    position: relative;
+    left: 12%;
+    margin-top: 3vh;
+}
+
+.forgot{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+::placeholder{
+    color: rgb(153, 152, 152);
+}
+
+.registr{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: 7%;
+}

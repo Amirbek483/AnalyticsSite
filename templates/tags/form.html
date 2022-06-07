@@ -1,0 +1,16 @@
+<div class="main1">
+    <h2 class="cont-zag">Связаться с нами</h2>
+    <p class="cont-text">По всем вопросам и предложениям Вы можете написать нам:</p>
+    <div class="content">
+        <form action="{% url 'contact' %}">
+            <div class="form-row">
+                <label for="id_email" class="required">Почта</label>
+                {% csrf_token %}
+                {{ contact_form }}
+            </div>
+            <div class="submit-row">
+                <input class="sub" type="submit" value="Отправить">
+            </div>
+        </form>
+    </div>
+</div>

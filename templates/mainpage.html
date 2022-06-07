@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30">
+	<link rel="stylesheet" type="text/css" href="{% static './mainpage.css' %}">
+	<title>Mainpage</title>
+</head>
+<body>
+	<header class="zagolovok">
+		<nav>
+		<div class="navbar">
+            <div class="logo1">
+                <img class="promo" src="{% static 'img/promo-logo2.png' %}">
+            </div>
+            <div class="logo2">
+                <img class="profile" src="{% static 'img/user.png' %}">
+            </div>
+		</div>
+		</nav>
+	</header>
+    <aside class="tools">
+        <div class="menu">
+            <img class="home" src="{% static 'img/home.png' %}">
+            <div class="text-block">
+                <a class="text" href="{% url 'main-page' %}">Главная</a>
+            </div>
+        </div>
+        <div class="menu2">
+            <img class="settings" src="{% static 'img/settings.png' %}">
+            <div class="text-block2">
+                <a class="text" href="{% url 'settings' %}">Настройки</a>
+            </div>
+        </div>
+        <div class="menu3">
+            <img class="cabinet" src="{% static 'img/user.png' %}">
+            <div class="text-block3">
+                <a class="text" href="{% url 'user-page' %}">Кабинет</a>
+            </div>
+        </div>
+    </aside>
+    <div class="content">
+        <h1 class="zag">Добро пожаловать !</h1>
+        <div class="knopka">
+            <a class="button" href="{% url 'analitics' %}">+ Новая Аналитика</a>
+        </div>
+    </div>
+{% block content %}
+
+{% endblock %}
+</body>
